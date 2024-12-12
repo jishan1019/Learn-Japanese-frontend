@@ -19,11 +19,15 @@ import { Button } from "../ui/button";
 import { useLoginMutation } from "@/redux/features/auth/authApi";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { useAppDispatch } from "@/redux/hooks";
+import { setUser } from "@/redux/features/auth/authSlice";
+import { USER_ROLE } from "@/constant";
 
 export function LoginForm() {
   const [login, { isLoading }] = useLoginMutation();
-
   const router = useRouter();
+
+  const dispatch = useAppDispatch();
 
   const form = useForm<LoginFormType>({
     resolver: zodResolver(loginSchema),
@@ -37,10 +41,24 @@ export function LoginForm() {
     const result = await login(data);
 
     if (result?.data?.success) {
+      dispatch(
+        setUser({
+          user: result?.data?.data?.user,
+          token: result?.data?.data?.accessToken,
+        })
+      );
+
       toast.success(result?.data?.message);
-      router.push("/");
+
+      const role = result?.data?.data?.user?.role;
+
+      if (role === USER_ROLE.user) {
+        router.push("/lesson");
+      } else if (role === USER_ROLE.admin) {
+        router.push("/dashboard");
+      }
     } else {
-      toast.error(result?.error?.data?.message);
+      toast.error((result?.error as any)?.data?.message);
     }
   }
 
