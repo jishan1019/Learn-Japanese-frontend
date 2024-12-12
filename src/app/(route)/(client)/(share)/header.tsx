@@ -30,7 +30,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow">
+    <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow">
       <div className="container flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-xl font-bold text-green-500 ml-2">
@@ -38,7 +38,7 @@ export function Header() {
           </span>
         </Link>
 
-        <div className="flex items-center justify-end gap-8 text-sm mr-4">
+        <div className="hidden md:flex items-center justify-end gap-8 text-sm mr-4">
           <Link
             className={`${
               pathname === "/lesson" ? "text-green-500 underline" : ""

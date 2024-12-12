@@ -8,7 +8,7 @@ const WithLayout = ({ children }: TChildren) => {
   return (
     <div className="container mx-auto">
       <Header />
-      {children}
+      <div style={{ minHeight: "calc(100vh - 240px)" }}>{children}</div>
       <Footer />
     </div>
   );
