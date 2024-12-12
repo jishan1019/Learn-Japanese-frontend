@@ -67,7 +67,7 @@ export default function LessonNo() {
       <h1 className="text-xl md:text-3xl font-bold mb-8 ml-2">
         Lesson {params?.lesson_no}: {vocabulary?.lesson?.name}
       </h1>
-      <Card className="max-w-2xl mx-auto m-2">
+      <Card className="max-w-2xl mx-auto ">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>{vocabulary?.word}</span>
