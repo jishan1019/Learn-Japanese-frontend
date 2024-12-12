@@ -59,6 +59,7 @@ export default function Lesson() {
             <CardFooter>
               <Button
                 className="w-full bg-green-500"
+                disabled={lesson?.vocabulary === 0}
                 onClick={() => router.push(`/lesson/${lesson?.number}`)}
               >
                 Learn
