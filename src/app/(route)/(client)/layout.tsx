@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./(share)/header";
 
 import { TChildren } from "@/types";
 import { Footer } from "./(share)/footer";
+import { Header } from "./(share)/header";
 
 const WithLayout = ({ children }: TChildren) => {
   return (
