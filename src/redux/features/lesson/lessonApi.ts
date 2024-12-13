@@ -12,6 +12,23 @@ const lessonApi = baseApi.injectEndpoints({
       invalidatesTags: ["Lesson"],
     }),
 
+    updateLesson: builder.mutation({
+      query: (userInfo) => ({
+        url: `/lesson/update-lesson/${userInfo?._id}`,
+        method: "PATCH",
+        body: userInfo,
+      }),
+      invalidatesTags: ["Lesson"],
+    }),
+
+    deleteLesson: builder.mutation({
+      query: (id) => ({
+        url: `/lesson//delete-lesson/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Lesson"],
+    }),
+
     getAllLesson: builder.query({
       query: (args) => {
         const params = new URLSearchParams();
@@ -31,4 +48,9 @@ const lessonApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useCreateLessonMutation, useGetAllLessonQuery } = lessonApi;
+export const {
+  useCreateLessonMutation,
+  useGetAllLessonQuery,
+  useUpdateLessonMutation,
+  useDeleteLessonMutation,
+} = lessonApi;
