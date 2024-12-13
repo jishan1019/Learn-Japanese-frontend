@@ -62,7 +62,7 @@ export default function ManageLessons() {
 
   const totalPages = lessons?.data?.meta?.totalPage || 1;
 
-  const [selectedLesson, setSelectedLesson] = useState(null);
+  const [selectedLesson, setSelectedLesson] = useState(null) as any;
 
   const form = useForm<z.infer<typeof lessonSchema>>({
     resolver: zodResolver(lessonSchema),

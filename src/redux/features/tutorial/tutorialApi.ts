@@ -12,6 +12,23 @@ const tutorialApi = baseApi.injectEndpoints({
       invalidatesTags: ["Tutorial"],
     }),
 
+    updateTutorial: builder.mutation({
+      query: (userInfo) => ({
+        url: `/tutorial/update-tutorial/${userInfo?._id}`,
+        method: "PATCH",
+        body: userInfo,
+      }),
+      invalidatesTags: ["Tutorial"],
+    }),
+
+    deleteTutorial: builder.mutation({
+      query: (id) => ({
+        url: `/tutorial/delete-tutorial/${id}`,
+        method: "DELETE",
+      }),
+      invalidatesTags: ["Tutorial"],
+    }),
+
     getAllTutorial: builder.query({
       query: (args) => {
         const params = new URLSearchParams();
@@ -31,5 +48,9 @@ const tutorialApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useCreateTutorialMutation, useGetAllTutorialQuery } =
-  tutorialApi;
+export const {
+  useCreateTutorialMutation,
+  useGetAllTutorialQuery,
+  useUpdateTutorialMutation,
+  useDeleteTutorialMutation,
+} = tutorialApi;
