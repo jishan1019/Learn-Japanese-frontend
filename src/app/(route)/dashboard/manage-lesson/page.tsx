@@ -57,6 +57,7 @@ export default function ManageLessons() {
   ];
 
   const { data: lessons, isLoading, error } = useGetAllLessonQuery(queryParams);
+
   const [updateLesson] = useUpdateLessonMutation();
   const [deleteLesson] = useDeleteLessonMutation();
 

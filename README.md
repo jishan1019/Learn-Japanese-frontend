@@ -1,37 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Learn Japanese: A Fun and Interactive Vocabulary Learning App - Frontend
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+Welcome to the Learn Japanese app! This application helps you embark on a journey of learning Japanese vocabulary in an engaging and interactive way. The app offers a user-friendly interface for both users and admins, ensuring a seamless learning experience.
+
+### Key Features:
+
+#### For Users:
+
+- Access and navigate through various Japanese lessons.
+- View detailed information for each vocabulary word (word, pronunciation, meaning, usage examples).
+- Learn pronunciation with audio playback for each word.
+- Track progress through lessons with intuitive navigation buttons.
+- Celebrate completion of a lesson with fun animations.
+- Explore additional learning resources through embedded YouTube tutorials on the Tutorials page.
+
+#### For Admins:
+
+- Manage system operations from a dedicated admin dashboard.
+- Create, edit, and delete lessons and vocabulary entries.
+- Assign and manage user roles (Admin or User).
+- Filter vocabulary entries by lesson number for efficient management.
+- Manage all tutorials within the system.
+
+## Technologies Used:
+
+- **Front-end**: TypeScript, Next.js, Redux, ShadCn, Tailwind CSS
+- **Back-end**: Node.js (Express.js), Mongoose, Zod, Multer, Argon2, Cloudinary, JWT
+- **Database**: MongoDB
+
+## Installation and Setup
+
+### Prerequisites
+
+Ensure the following software is installed:
+
+- Node.js (v14 or higher)
+- Yarn (v1.22 or higher)
+- MongoDB (v4.4 or higher)
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jishan1019/Learn-Japanese-Frontend.git
+cd learn-japanese-frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### The project will be available at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Credentials
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Learn-Japanese-frontend
+User: user@gmail.com
+Admin: admin@gmail.com
+Password: 1234

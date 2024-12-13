@@ -44,7 +44,7 @@ export default function AddTutorial() {
     try {
       await addTutorial(values).unwrap();
       toast.success("Tutorial Added successfully");
-    } catch (error) {
+    } catch (error: any) {
       toast.error("Failed to add tutorial");
     }
   }
